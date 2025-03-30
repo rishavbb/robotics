@@ -29,6 +29,9 @@ CATKIN_DEVEL_PREFIX:PATH=/workspace/devel
 //Catkin enable testing
 CATKIN_ENABLE_TESTING:BOOL=ON
 
+//Prefix to apply to package generated via gendebian
+CATKIN_PACKAGE_PREFIX:STRING=
+
 //Catkin skip testing
 CATKIN_SKIP_TESTING:BOOL=OFF
 
@@ -44,6 +47,10 @@ CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
+
+//For backwards compatibility, what version of CMake commands and
+// syntax should this version of CMake try to support.
+CMAKE_BACKWARDS_COMPATIBILITY:STRING=2.4
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
@@ -306,6 +313,9 @@ EMPY_EXECUTABLE:FILEPATH=EMPY_EXECUTABLE-NOTFOUND
 //Empy script
 EMPY_SCRIPT:STRING=/usr/lib/python3/dist-packages/em.py
 
+//Single output directory for building all executables.
+EXECUTABLE_OUTPUT_PATH:PATH=
+
 //Path to a library.
 GMOCK_LIBRARY:FILEPATH=GMOCK_LIBRARY-NOTFOUND
 
@@ -342,6 +352,9 @@ GTest_DIR:PATH=GTest_DIR-NOTFOUND
 //Enable installation of googletest. (Projects embedding googletest
 // may want to turn this OFF.)
 INSTALL_GTEST:BOOL=OFF
+
+//Single output directory for building all libraries.
+LIBRARY_OUTPUT_PATH:PATH=
 
 //lsb_release executable was found
 LSB_FOUND:BOOL=TRUE
@@ -487,6 +500,12 @@ message_generation_DIR:PATH=/opt/ros/noetic/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
+
+//Value Computed by CMake
+my_robot_BINARY_DIR:STATIC=/workspace/build/my_robot
+
+//Value Computed by CMake
+my_robot_SOURCE_DIR:STATIC=/workspace/src/my_robot
 
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/noetic/share/pluginlib/cmake
